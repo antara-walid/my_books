@@ -80,7 +80,3 @@ def delete_book(book_id: Annotated[int, Path(..., gt=0, le=1000)]):
                             detail="Could not find Book with the given id")
 
     del books[book_id]
-
-
-if __name__ == "__main__":
-    uvicorn.run(app, host="127.0.0.1", port=8000)
